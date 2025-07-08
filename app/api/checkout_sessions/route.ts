@@ -6,6 +6,7 @@ export async function POST() {
   try {
     const headersList =  await headers()
     const origin = headersList.get('origin') ?? 'https://transcriber-audiofile.vercel.app'
+    
 
     const session = await stripe.checkout.sessions.create({
       line_items: [
