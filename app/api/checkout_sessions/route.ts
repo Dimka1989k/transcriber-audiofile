@@ -5,7 +5,7 @@ import { stripe } from '../../../lib/stripe'
 export async function POST() {
   try {
     const headersList =  await headers()
-    const origin = headersList.get('origin') ?? 'https://transcriber-audiofile.vercel.app/'
+    const origin = headersList.get('origin') ?? 'https://transcriber-audiofile-ex89yu09m-dimon1989ks-projects.vercel.app/'
 
     const session = await stripe.checkout.sessions.create({
       line_items: [
